@@ -1,0 +1,26 @@
+{
+  "name": "shobacknd",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./build/main.js",
+    "flow": "flow",
+    "dev": "backpack dev",
+    "build": "backpack build",
+    "postinstall": "backpack build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "backpack-core": "^0.8.4",
+    "express": "^4.14.0",
+    "flow-bin": "^0.101.1",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
