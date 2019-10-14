@@ -11,6 +11,10 @@ export const initLocals = (req, res, next) => {
 };
 
 export const customResponse = (req, res) => {
-  const { locals } = res;
-  return res.status(locals.status).send(locals);
+  const { status, data, message } = res.locals;
+  return res.status(status).send({
+    status,
+    message,
+    data,
+  });
 };
