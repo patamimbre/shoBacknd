@@ -1,12 +1,11 @@
-import { flow, includes, first } from 'lodash/fp';
+import express from 'express';
 
-const symbol = '.,!?'.split('');
+import routes from './routes';
 
-const startWithSymbol = (word) => (
-  flow(
-    first(word),
-    includes(symbol),
-  )
-);
+const app = express();
+const port = 3000;
 
-console.log(startWithSymbol('Hello'));
+app.use('/v1', routes);
+
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
