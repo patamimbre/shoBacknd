@@ -4,7 +4,7 @@ const router = Router();
 
 // router.all('*', requireAuthentication)
 router.get('/', (req, res, next) => {
-  res.locals.data = { action: 'list' };
+  res.setResponse(202, 'WORKING?', { ule: 12 });
   next();
 });
 
